@@ -1,4 +1,4 @@
-name: CI/CD - Optical Shop Website
+name: CI/CD - Optical Shop
 
 on:
   push:
@@ -13,11 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy using Docker Compose
+      - name: Deploy with Docker Compose
         run: |
-          cd web_host
-          docker compose down || true
-          docker compose up -d --build
+          docker-compose down || true
+          docker-compose up -d --build
 
-      - name: Verify
+      - name: Verify containers
         run: docker ps
