@@ -13,10 +13,18 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy with Docker Compose
+      - name: Stop and remove old containers
         run: |
-          docker-compose down || true
-          docker-compose up -d --build
+          docker-compose down --remove-orphans || true
+
+      - name: Remove old images
+        run: |
+          docker rmi -f wacxon-web_page1 wacxon-web_page2 || true
+
+      - name: Build and run containers
+        run: |
+          docker-compose build --no-cache
+          docker-compose up -d
 
       - name: Verify containers
         run: docker ps
