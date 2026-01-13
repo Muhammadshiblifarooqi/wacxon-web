@@ -1,16 +1,19 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: #0f172a;          /* Dark blue background */
+  color: #e5e7eb;
 }
 
+/* Header */
 header {
-  background: #198754;
-  color: white;
+  background: #1e293b;          /* Dark blue */
+  color: #d4af37;               /* Bronze */
   padding: 25px;
   text-align: center;
 }
 
+/* Products section */
 .products {
   display: flex;
   justify-content: center;
@@ -18,18 +21,21 @@ header {
   padding: 50px;
 }
 
+/* Product cards */
 .card {
-  background: #f1f1f1;
+  background: #1e293b;          /* Dark blue card */
   padding: 25px;
   width: 220px;
   border-radius: 8px;
   text-align: center;
+  color: #f8fafc;
+  border: 1px solid #d4af37;    /* Bronze border */
 }
 
+/* Footer */
 footer {
-  background: #198754;
-  color: white;
+  background: #020617;          /* Deep navy */
+  color: #d4af37;               /* Bronze text */
   text-align: center;
   padding: 15px;
 }
-
