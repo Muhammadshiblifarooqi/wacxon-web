@@ -13,10 +13,30 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy with Docker Compose
+      # ---------- PAGE 1 ----------
+      - name: Build Page1 image
         run: |
-          docker-compose down || true
-          docker-compose up -d --build
+          docker build -t optical_page1 ./page1
 
-      - name: Verify containers
-        run: docker ps
+      - name: Run Page1 container
+        run: |
+          docker rm -f optical_page1_container || true
+          docker run -d \
+            -p 8081:80 \
+            --name optical_page1_container \
+            optical_page1
+
+      # ---------- PAGE 2 ----------
+      - name: Build Page2 image
+        run: |
+          docker build -t optical_page2 ./page2
+
+      - name: Run Page2 container
+        run: |
+          docker rm -f optical_page2_container || true
+          docker run -d \
+            -p 8082:80 \
+            --name optical_page2_container \
+            optical_page2
+
+      # --
