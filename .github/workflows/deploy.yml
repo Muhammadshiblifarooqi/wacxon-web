@@ -1,0 +1,23 @@
+name: CI/CD - Optical Shop Website
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy using Docker Compose
+        run: |
+          cd web_host
+          docker compose down || true
+          docker compose up -d --build
+
+      - name: Verify
+        run: docker ps
