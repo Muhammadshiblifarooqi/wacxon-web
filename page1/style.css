@@ -1,40 +1,48 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
+  background: #0f172a;          /* Dark blue background */
+  color: #e5e7eb;
 }
 
+/* Header */
 header {
-  background: #0b5ed7;
-  color: white;
+  background: #1e293b;          /* Dark blue */
+  color: #d4af37;               /* Bronze */
   padding: 30px;
   text-align: center;
 }
 
+/* Hero section */
 .hero {
   padding: 50px;
   text-align: center;
-  background: #e7f1ff;
+  background: #020617;          /* Deep navy */
+  color: #f8fafc;
 }
 
+/* Info section */
 .info {
   display: flex;
   justify-content: space-around;
   padding: 40px;
 }
 
+/* Info cards */
 .info div {
-  background: white;
+  background: #1e293b;          /* Dark blue card */
   padding: 20px;
   width: 250px;
   border-radius: 8px;
   text-align: center;
+  color: #f8fafc;
+  border: 1px solid #d4af37;    /* Bronze border */
 }
 
+/* Footer */
 footer {
-  background: #0b5ed7;
-  color: white;
+  background: #020617;          /* Dark blue */
+  color: #d4af37;               /* Bronze text */
   text-align: center;
   padding: 15px;
 }
