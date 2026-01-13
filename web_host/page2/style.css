@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+}
+
+header {
+  background: #198754;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+}
+
+.card {
+  background: #f1f1f1;
+  padding: 25px;
+  width: 220px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+footer {
+  background: #198754;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+

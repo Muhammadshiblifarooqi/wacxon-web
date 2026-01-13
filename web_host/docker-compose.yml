@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  page1:
+    build: ./page1
+    container_name: visionoptics_home
+    ports:
+      - "8081:80"
+    restart: unless-stopped
+
+  page2:
+    build: ./page2
+    container_name: visionoptics_products
+    ports:
+      - "8082:80"
+    restart: unless-stopped
+
